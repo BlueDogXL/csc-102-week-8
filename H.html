@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>G</title>
+            <style>
+                body {
+                    background-color:midnightblue;
+                    color:deepskyblue;
+                }
+        </style>
+        <script src="H.js"></script>
+        <script src="dataLoader.js"></script>
+        <script>
+            var theTime = new Date();
+        var tempTime = new Date();
+        var lastIteration = 0;
+        var time_interval = 5000;
+        var running = true;
+        var index = 0;
+        var timer;
+        //gets data into array
+        var data = getData();
+        </script>
+    </head>
+    <body>
+        <h1>Heck Yeah Data</h1> 
+        <table id="data" border="2" width="70%">
+            <col style="width: 35%">
+            <col style="width: 35%">
+            <thead>
+                <th>Data type</th>
+                <th>Reading</th>
+            </thead>
+            <tbody>
+                <tr id="seconds"></tr>
+                <tr id="latitude"></tr>
+                <tr id="longitude"></tr>
+                <tr id="gpsSensor_alt"></tr>
+                <tr id="bmpSensor_alt"></tr>
+                <tr id="bmpSensor_pres"></tr>
+                <tr id="bmpSensor_temp"></tr>
+                <tr id="digSensor_temp"></tr>
+                <tr id="cssSensor_temp"></tr>
+                <tr id="cssSensor_eco2"></tr>
+                <tr id="cssSensor_TVOC"></tr>
+                <tr id="UV"></tr>
+                <tr id="accelX"></tr>
+                <tr id="accelY"></tr>
+                <tr id="accelZ"></tr>
+                <tr id="magneticX"></tr>
+                <tr id="magneticY"></tr>
+                <tr id="magneticZ"></tr>
+                <tr id="gyroX"></tr>
+                <tr id="gyroY"></tr>
+                <tr id="gyroZ"></tr>
+            </tbody>
+        </table>
+        <br>
+    The current time is: <div id="timeStamp">Press start for current time!</div>
+    <br>
+    <button id="startButton" onclick="start();">Start</button>
+    <button id="stopButton" onclick="stop();">Stop</button>
+    <br>
+    </body>
+</html>
